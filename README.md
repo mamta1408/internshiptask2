@@ -8,8 +8,11 @@
 *Sample Phishing Email: "Account Verification Required – Action Needed"*
 
 From: no-reply@support-google.com
+
 Subject: [Action Required] Verify your Google Account to avoid suspension
+
 Date: Tue, 5 Aug 2025 10:14:32 +0530
+
 To: you@example.com
 
 Dear Google User,
@@ -17,6 +20,7 @@ Dear Google User,
 We noticed suspicious activity on your Google account that may indicate unauthorized access. For your protection, we’ve temporarily locked certain features until we can verify your identity.
 
 What you need to do:
+
 Please verify your account by clicking the button below. This will help us ensure your account remains secure and uninterrupted.
 
  Verify My Account Now
@@ -24,9 +28,11 @@ Please verify your account by clicking the button below. This will help us ensur
    This link is valid for the next 24 hours. Failure to verify within this time may result in temporary suspension of your Google services including Gmail, Drive, and YouTube access.
 
 Need Help?
+
 If you think this is a mistake or you did not request this, please visit our Help Center.
 
 Thank you for choosing Google.
+
 – The Google Security Team
 
 **lets examine the red flags**
@@ -58,6 +64,7 @@ Thank you for choosing Google.
     If found mismatching or originating from unknown servers, this supports spoofing.
 
  *Analyzing Email Headers for Phishing*
+ 
 ✅ Step 1: Find the Full Email Header
 📧  In Gmail:
 
