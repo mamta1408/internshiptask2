@@ -119,7 +119,7 @@ Thank you for choosing Google.
         In real emails, the phrasing is usually: “Thanks for using Google,” or “Thanks, Google team.”
    
 
-Conclusion:
+**Conclusion:**
 The email we examined  exhibits multiple phishing red flags 
 Fake Email Address
 Urgent Language
