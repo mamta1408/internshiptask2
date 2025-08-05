@@ -1,3 +1,8 @@
+ **task 2**
+Objective: Identify phishing characteristics in a suspicious email sample.
+Tools: Email client or saved email file (text), free online header analyzer.
+
+
 *Sample Phishing Email: "Account Verification Required – Action Needed"*
 
 From: no-reply@support-google.com
@@ -14,7 +19,7 @@ Please verify your account by clicking the button below. This will help us ensur
 
  Verify My Account Now
 
-    This link is valid for the next 24 hours. Failure to verify within this time may result in temporary suspension of your Google services including Gmail, Drive, and YouTube access.
+   This link is valid for the next 24 hours. Failure to verify within this time may result in temporary suspension of your Google services including Gmail, Drive, and YouTube access.
 
 Need Help?
 If you think this is a mistake or you did not request this, please visit our Help Center.
