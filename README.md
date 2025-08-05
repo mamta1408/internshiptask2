@@ -146,6 +146,7 @@ Thank you for choosing Google.
 
 
 simple precautions you should take to protect yourself from phishing emails:
+
 ✅ 1. Check the Sender's Email Address
 
     Make sure it’s from a legit domain like @google.com, not something odd like @support-google.com.
