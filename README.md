@@ -120,14 +120,14 @@ Thank you for choosing Google.
    
 
 **Conclusion:**
-The email we examined  exhibits multiple phishing red flags 
-Fake Email Address
-Urgent Language
-Suspicious Link/Button
-Generic Greeting
-Threat of Account Suspension
-No Personalized Information
-did not pass the SPF, DKIM, DMARC results
+   The email we examined  exhibits multiple phishing red flags 
+   Fake Email Address
+   Urgent Language
+   Suspicious Link/Button
+   Generic Greeting
+   Threat of Account Suspension
+   No Personalized Information
+   did not pass the SPF, DKIM, DMARC results
 
 
 simple precautions you should take to protect yourself from phishing emails:
