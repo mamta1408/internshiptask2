@@ -76,13 +76,15 @@ Thank you for choosing Google.
 
     A new tab opens with the raw email header and metadata.
  ✅ Step 2: Copy the Full Header
+ 
  ✅ Step 3: Use an Online Email Header Analyzer
  🔒 SPF, DKIM, DMARC Results
 
     ✅ PASS: Good – sender is verified.
 
     ❌ FAIL: Red flag – sender is not authorized to send emails for the domain.
-🌐 Source IP Address    
+    
+ ✅ Step 4: 🌐 Source IP Address    
     
    
  **3. Identify suspicious links or attachments**
