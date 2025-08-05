@@ -1,8 +1,14 @@
- **task 2**
- 
-**Objective: Identify phishing characteristics in a suspicious email sample.**
+ # Task 2: Phishing Email Analysis
 
-**Tools: Email client or saved email file (text), free online header analyzer.**
+## Objective
+Identify phishing characteristics in a suspicious email sample.
+
+## Tools Used
+- Email client (e.g., Gmail)
+- Online email header analyzers:
+  - MXToolbox: https://mxtoolbox.com/EmailHeaders.aspx
+  - Google Admin Toolbox: https://toolbox.googleapps.com/apps/messageheader/
+  - IPVoid Email Header Analyzer: https://emailheader.org/
 
 
 *Sample Phishing Email: "Account Verification Required – Action Needed"*
@@ -35,161 +41,109 @@ Thank you for choosing Google.
 
 – The Google Security Team
 
-**lets examine the red flags**
 
-***1. Examine sender’s email address***
+## Red Flags Identified
 
-    Sender: no-reply@support-google.com
+### 1. Sender’s Email Address
+- **Address:** no-reply@support-google.com
+- This is not a valid Google domain. Legitimate Google emails use domains like `@google.com` or `@accounts.google.com`.
+- The domain "support-google.com" is a lookalike used for deception.
 
-    Red flag: This is not a legitimate Google domain. Real Google emails typically come from @google.com, @accounts.google.com, or similar.
-    “support-google.com” is a spoofed or lookalike domain meant to trick users.
+---
 
+### 2. Email Header Discrepancies
+Use online analyzers to check:
 
-***2. Check email headers for discrepancies***
+- SPF/DKIM/DMARC: Failures indicate the sender is not authorized.
+- Reply-To: May differ from the From address.
+- Source IP: May not be associated with Google servers.
 
-    Using an email header analyzer  like:
+**Steps to Analyze Email Headers:**
+1. In Gmail: Open the message, click the three dots, and select "Show original".
+2. Copy the full email header.
+3. Paste it into a header analysis tool.
+4. Review SPF, DKIM, DMARC results and IP location.
 
-    MXToolbox Analyzer
+---
 
-    Google Admin Toolbox Messageheader
+### 3. Suspicious Links or Attachments
+- Button text: "Verify My Account Now"
+- Hovering over the button reveals: `http://secure-google-verification.com/xyz`
+- Legitimate Google URLs always begin with `https://accounts.google.com/`
 
-    IPVoid Email Header Analyzer , one would check:
+---
 
-        SPF/DKIM/DMARC results
+### 4. Urgent or Threatening Language
+The email uses phrases like:
+- "Action Required"
+- "Avoid suspension"
+- "Failure to verify within this time may result in suspension"
 
-        Source IP address (possibly unrelated to Google)
+These are intended to create panic and pressure the user to act without thinking.
 
-        "Reply-to" address might differ from "From" address
+---
 
-    If found mismatching or originating from unknown servers, this supports spoofing.
+### 5. Mismatched or Misleading URLs
+Example:
 
- *Analyzing Email Headers for Phishing*
- 
-✅ Step 1: Find the Full Email Header
-📧  In Gmail:
+- Displayed link: `https://google.com/verify`
+- Actual link: `http://verify-now.security-checks.io`
 
-    Open the suspicious email.
+This kind of mismatch is a clear indicator of phishing.
 
-    Click the three vertical dots (More) in the top right of the message.
+---
 
-    Select "Show original."
+### 6. Generic Greeting and Unusual Language
+- The email begins with "Dear Google User" rather than a personalized greeting.
+- Ends with "Thank you for choosing Google" — a phrase not commonly used by Google.
 
-    A new tab opens with the raw email header and metadata.
- ✅ Step 2: Copy the Full Header
- 
- ✅ Step 3: Use an Online Email Header Analyzer
- 🔒 SPF, DKIM, DMARC Results
+---
 
-    ✅ PASS: Good – sender is verified.
+## Conclusion
 
-    ❌ FAIL: Red flag – sender is not authorized to send emails for the domain.
-    
- ✅ Step 4: 🌐 Source IP Address    
-    
-   
- **3. Identify suspicious links or attachments**
+The email shows multiple signs of phishing, including:
 
-    The link says: “Verify My Account Now”
+- Fake or spoofed sender address
+- Suspicious links and misleading button URLs
+- Use of urgency and scare tactics
+- Lack of personalization
+- Failed email authentication (SPF, DKIM, DMARC)
 
-    Hovering over the button would likely reveal a URL not belonging to Google, such as:
+---
 
-    http://secure-google-verification.com/xyz
+## Precautions to Avoid Phishing Attacks
 
-    Red flag: Legitimate Google verification links always start with https://accounts.google.com/
+1. **Check the Sender’s Address**  
+   Ensure the domain is official (e.g., `@google.com`).
 
+2. **Avoid Clicking Suspicious Links**  
+   Hover over links to preview their destination. Type URLs directly when in doubt.
 
+3. **Look for Personalization**  
+   Legitimate services use your name, not "Dear User".
 
-**4. Look for urgent or threatening language**
+4. **Watch for Urgency or Threats**  
+   Be cautious of emails pressuring you to act quickly.
 
-    Examples in email:
+5. **Enable Two-Factor Authentication (2FA)**  
+   Adds an extra layer of protection.
 
-        “Action Required”
+6. **Keep Software Updated**  
+   Regularly update your browser, OS, and antivirus tools.
 
-        “Avoid suspension”
+7. **Never Share Passwords or OTPs**  
+   No trusted company will ask for them via email.
 
-        “Failure to verify within this time may result in temporary suspension...”
+8. **Report Phishing Emails**  
+   In Gmail: Click the three dots and select "Report phishing".
 
- *Purpose: Creates panic and urgency, a common phishing tactic to get users to act impulsively.*
+9. **Use a Password Manager**  
+   Helps manage strong passwords and can alert you to fake sites.
 
-**5. Note mismatched URLs**
+10. **Educate Yourself and Others**  
+    Stay informed about new scams and help others recognize them.
 
-    The displayed link might look like a Google site, but hovering over it shows something else.
+---
 
-    Example:
+## Red Flags Identified
 
-        Displayed: https://google.com/verify
-
-        Actual link: http://verify-now.security-checks.io
-
-    Mismatched URLs are a strong sign of phishing.
-
-
-
-
- **6. Spelling or grammar errors**
-
-    This sample email is written quite cleanly but:
-
-        The phrase “Thank you for choosing Google” is not typical of official Google communication.
-
-        In real emails, the phrasing is usually: “Thanks for using Google,” or “Thanks, Google team.”
-   
-
-  **Conclusion:**
-                 ** The email we examined  exhibits multiple phishing red flags **
-                 
-                  Fake Email Address
-                  Urgent Language
-                  Suspicious Link/Button
-                  Generic Greeting
-                  Threat of Account Suspension
-                  No Personalized Information
-                   did not pass the SPF, DKIM, DMARC results
-
-
-simple precautions you should take to protect yourself from phishing emails:
-
-✅ 1. Check the Sender's Email Address
-
-    Make sure it’s from a legit domain like @google.com, not something odd like @support-google.com.
-
-✅ 2. Don’t Click Suspicious Links or Buttons
-
-    Hover over links to see where they lead before clicking.
-
-    If unsure, go to the website directly by typing the URL yourself (e.g., www.google.com).
-
-✅ 3. Look for Personalization
-
-    Trusted companies use your name, not “Dear User” or “Customer”.
-
-✅ 4. Watch for Urgency or Scare Tactics
-
-    Be cautious of messages that pressure you to act quickly or threaten suspension.
-
-✅ 5. Use Two-Factor Authentication (2FA)
-
-    Turn on 2FA on all important accounts for extra security.
-
-✅ 6. Keep Your Software Updated
-
-    Always update your browser, antivirus, and operating system to protect against threats.
-
-✅ 7. Never Share Passwords or OTPs
-
-    No real company will ask for your password or OTP via email or link.
-
-✅ 8. Report Phishing Emails
-
-    In Gmail, click the three dots (⋮) and choose “Report phishing”.
-
-✅ 9. Use a Password Manager
-
-    It helps create strong passwords and can warn you if a website is fake.
-
-✅ 10. Educate Yourself and Others
-
-    Learn about common scams and teach friends/family how to spot phishing emails.
- 
-
-   
